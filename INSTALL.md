@@ -18,10 +18,11 @@
 - CUDA
 
 
-### Option 1: Step-by-step installation
+### Option : Step-by-step installation
 
 ```bash
 conda create -n lstfe python=3.7.16
+
 source activate lstfe
 
 pip install yacs opencv-python pycocotools cityscapesscripts scipy

@@ -30,22 +30,22 @@ Please download FLDrones dataset. After that, we recommend to symlink the path t
 
 The inference command line for testing on the validation dataset:
 
-    python -m torch.distributed.launch \
+    python -m torch.distributed.run \
         --nproc_per_node 1 \
         tools/test_net.py \
         --config-file configs/LSTFE/vid_R_101_C4_LSTFE_1x.yaml \
-        MODEL.WEIGHT fldrones_lstfe.pth 
+        MODEL.WEIGHT FLDrones_lstfe.pth 
         
 Please note that:
-1) `fldrones_lstfe.pth` is your model name
+1) `FLdrones_lstfe.pth` is your model name
 2) If you want to evaluate a different model, please change `--config-file` to its config file and `MODEL.WEIGHT` to its weights file.
 
 ### Training
 
 The following command line will train LSTFE_Resnet101 on 1 GPUs with Synchronous Stochastic Gradient Descent (SGD):
 
-    python -m torch.distributed.launch \
-        --nproc_per_node=1 \
+    python -m torch.distributed.run \
+        --nproc_per_node 1 \
         tools/train_net.py \
         --config-file configs/LSTFE/vid_R_101_C4_LSTFE_1x.yaml \
         OUTPUT_DIR training_dir/LSTFE
