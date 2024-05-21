@@ -1,0 +1,24 @@
+MODEL:
+  VID:
+    LSTFE:
+      GLOBAL_FRAME_NUM: 4 
+      ALIGN: 
+        ENABLE: True
+      SELECT:
+        ENABLE: True
+    ENABLE: True
+    METHOD: "lstfe"
+    ROI_BOX_HEAD:
+      ATTENTION:
+        ENABLE: True
+        STAGE: 3
+  META_ARCHITECTURE: "GeneralizedRCNNLSTFE"
+  WEIGHT: "catalog://ImageNetPretrained/MSRA/R-101"
+  BACKBONE:
+    CONV_BODY: "R-101-C4"
+  ROI_BOX_HEAD:
+    FEATURE_EXTRACTOR: "LSTFEFeatureExtractor"
+    PREDICTOR: "FPNPredictor"
+DATASETS:
+  TRAIN: ("VID_train_15frames",)
+  TEST: ("VID_val_videos",)
