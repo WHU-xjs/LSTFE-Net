@@ -4,11 +4,12 @@ This repo is an official implementation of ["LSTFE-net: Long short-term feature 
 ## Citing LSTFE
 Please cite our paper in your publications if it helps your research:
 ```
-@inproceedings{xiao23lstfe,
-  Author = {Xiao, Jinsheng and Wu, Yuanxu and Chen, Yunhua and Wang, Shurui and Wang, Zhongyuan and Ma, Jiayi},
-  Title = {LSTFE-net: Long short-term feature enhancement network for video small object detection},
-  Conference = {CVPR},
-  Year = {2023}
+@inproceedings{xiao2023lstfe,
+  title={LSTFE-net: Long short-term feature enhancement network for video small object detection},
+  author={Xiao, Jinsheng and Wu, Yuanxu and Chen, Yunhua and Wang, Shurui and Wang, Zhongyuan and Ma, Jiayi},
+  booktitle={the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={14613--14622},
+  year={2023}
 }
 ```
 ## Installation
